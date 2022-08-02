@@ -51,6 +51,11 @@ jobs:
                 "id": "cloudhub-deploy",
                 "username": "${{ secrets.ANYPOINT_USERNAME }}",
                 "password": "${{ secrets.ANYPOINT_PASSWORD }}"
+            },
+            {
+                "id": "releases-ee",
+                "username": "${{ secrets.ANYPOINT_USERNAME_RELEASE_EE }}",
+                "password": "${{ secrets.ANYPOINT_PASSWORD_RELEASE_EE }}"
             }]
           
       # maven build command, could add other flags if needed
