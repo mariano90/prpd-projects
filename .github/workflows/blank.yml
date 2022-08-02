@@ -115,6 +115,8 @@ jobs:
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn --file check-in-papi-app/pom.xml deploy -DmuleDeploy -DapplicationName=checkin-api-mas-04-aug \
-        -Denvironment=dev -Dapi.id=18030097 -Dencrypt.key=secure12345 \
+        -Denvironment=dev \
+        -Dapi.id=18030097 \
+        -Dencrypt.key=${{ secrets.ENCRYPT_KEY }} \
         -Dclient_id=${{ secrets.AP_CLIENTID }}  \
         -Dclient_secret=${{ secrets.AP_CLIENTSECRET }}
